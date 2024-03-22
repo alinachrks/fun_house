@@ -7,6 +7,27 @@ import streamlit as st
 
 app = hy.HydraApp(title='My App', navbar_sticky=True, sidebar_state='collapsed')
 
+# Вставьте этот код в начало вашего файла
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #F7F7F8; /* Цвет фона */
+        color: #202021; /* Цвет текста */
+        font-family: sans-serif; /* Шрифт */
+    }
+    .css-1aumxhk {
+        background-color: #ECEBE5; /* Второй цвет фона */
+    }
+    .css-1aumxhk select {
+        color: #202021; /* Цвет текста в выпадающем меню */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
 # option_data = [
 #    {'icon': "bi bi-hand-thumbs-up", 'label':"about"},
 #    {'icon':"fa fa-question-circle",'label':"analytics"},
@@ -26,12 +47,16 @@ app = hy.HydraApp(title='My App', navbar_sticky=True, sidebar_state='collapsed')
 def home():
     return about.app()
 
-@app.addapp()
+@app.addapp(title='Bot')
 def app2():
     return bot.app()
 
-@app.addapp(title='The Best', icon="🥰")
+@app.addapp(title='Analytics')
 def app3():
     return analytics.app()
+
+@app.addapp(title='Development')
+def app4():
+    return development.app()
 
 app.run()

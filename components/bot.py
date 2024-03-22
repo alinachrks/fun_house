@@ -233,8 +233,8 @@ def app():
 
 
     # Define main layout
-    st.title("Meow")
-    st.subheader("I iz CatGDP, meow-speak anypawdy to me and I'll purr-ly there with a paw-some meow reply. 🐱")
+    st.title("Data Analytics and AI Application in Business")
+    st.write("This chatbot serves as a virtual assistant, providing insights and guidance based on the latest advancements in AI and data analytics, empowering businesses to make informed decisions and stay competitive in their industries.")
     st.subheader("")
     chat_box = st.container()
     st.write("")
@@ -244,11 +244,15 @@ def app():
     with footer:
         st.markdown("""
         <div align=right><small>
-        Page views: <img src="https://www.cutercounter.com/hits.php?id=hvxndaff&nd=5&style=1" border="0" alt="hit counter"><br>
-        Unique visitors: <img src="https://www.cutercounter.com/hits.php?id=hxndkqx&nd=5&style=1" border="0" alt="website counter"><br>
-        GitHub <a href="https://github.com/tipani86/CatGDP"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/tipani86/CatGDP?style=social"></a>
+        Page views: <img src="https://www.cutercounter.com/hits.php?id=hxpaapo&nd=5&style=1" border="0" alt="best free website hit counter"></a><br>  
+        Unique visitors: <img src="https://www.cutercounter.com/hits.php?id=hxpaapq&nd=5&style=1" border="0" alt="hit counter"></a><br>  
+        GitHub <a href="https://github.com/alinachrks/rudolf/tree/master"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/alinachrks/rudolf?style=social"></a>  
         </small></div>
+                    
         """, unsafe_allow_html=True)
+
+    # Load CSS code
+    st.markdown(get_css(), unsafe_allow_html=True)
 
     # if DEBUG:
     #     with st.sidebar:

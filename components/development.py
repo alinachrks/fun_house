@@ -1,25 +1,32 @@
 import streamlit as st
 
 def app():
-    page_element="""
-    <style>
-    [data-testid="stAppViewContainer"]{
-    background-image: url("https://i.ibb.co.com/3yVykRQ/Minimal-Photography-1-fotor-20240315111216.png");
-    background-size: cover;
-    }
-    [data-testid="stHeader"]{
-    background-color: rgba(0,0,0,0);
-    }
-    [data-testid="stToolbar"]{
-    right: 2rem;
-    background-image: url("https://cdn.iconscout.com/icon/free/png-256/hamburger-menu-462145.png");
-    background-size: cover;
-    }
-    </style>
-    """
-    st.markdown(page_element, unsafe_allow_html=True)
-
     # Заголовок страницы
-    st.markdown("<h1 style='text-align: center; color: white; font-family: \"Old Standard TT\", serif; font-size: 32px;'>About the App </h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white; font-family: \"Old Standard TT\", serif; font-size: 32px;'>Gallery </h1>", unsafe_allow_html=True)
 
+    col1, col2, col3 = st.columns(3)
 
+    # Первая строка
+    with col1:
+        st.image("img/1.jpg")
+    with col2:
+        st.image("img/2.jpg")
+    with col3:
+        st.image("img/3.jpg")
+
+    # Вторая строка
+    with col1:
+        st.image("img/4.jpg")
+    with col2:
+        st.image("img/5.jpg")
+    with col3:
+        st.image("img/6.jpg")
+
+    # Третья строка
+    with col1:
+        st.image("img/7.jpg")
+    with col2:
+        st.image("img/8.jpg")
+    with col3:
+        st.image("img/9.png")
+    # Последний столбец оставляем пустым, если число изображений не кратно трем

@@ -1,7 +1,7 @@
 from openai import AsyncOpenAI
 
 aclient = AsyncOpenAI()
-from components.bot import *
+from components.bot import PRE_SUMMARY_NOTE, POST_SUMMARY_NOTE, PRE_SUMMARY_PROMPT, NLP_MODEL_NAME, NLP_MODEL_TEMPERATURE, NLP_MODEL_REPLY_MAX_TOKENS, NLP_MODEL_FREQUENCY_PENALTY, NLP_MODEL_PRESENCE_PENALTY, NLP_MODEL_STOP_WORDS, TIMEOUT, NLP_MODEL_MAX_TOKENS
 
 # A wrapper function for OpenAI's Chat Completion API async call with default values from app config
 async def get_chatbot_reply_async(
@@ -80,9 +80,9 @@ async def generate_prompt_from_memory_async(
                 new_prompt = "\n".join(x['content'] for x in new_memory)
                 tokens_used += len(tokenizer.tokenize(new_prompt))
 
-                if DEBUG:
-                    print("Summarization triggered. New prompt:")
-                    print(new_memory)
+                # if DEBUG:
+                #     print("Summarization triggered. New prompt:")
+                #     print(new_memory)
 
                 # Build the output
                 res['data'] = {

@@ -21,3 +21,19 @@ def app():
 
     # Заголовок страницы
     st.markdown("<h1 style='text-align: center; color: white; font-family: \"Old Standard TT\", serif; font-size: 32px;'>About the App </h1>", unsafe_allow_html=True)
+
+
+
+    button_clicked1 = st.button('Перейти на сайт 1')
+    button_clicked2 = st.button('Перейти на сайт 2')
+    button_clicked3 = st.button('Перейти на сайт 3')
+
+
+    if button_clicked1:
+        st.markdown('<script>window.open("https://ai-for-business.streamlit.app","_blank");</script>', unsafe_allow_html=True)
+
+    if button_clicked2:
+        st.markdown('<script>window.open("https://rudolf.streamlit.app","_blank");</script>', unsafe_allow_html=True)
+
+    if button_clicked3:
+        st.markdown('<script>window.open("https://urban-analysis-one.streamlit.app","_blank");</script>', unsafe_allow_html=True)

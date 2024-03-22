@@ -21,3 +21,5 @@ def app():
 
     # Заголовок страницы
     st.markdown("<h1 style='text-align: center; color: white; font-family: \"Old Standard TT\", serif; font-size: 32px;'>About the App </h1>", unsafe_allow_html=True)
+
+

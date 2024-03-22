@@ -24,16 +24,11 @@ def app():
 
 
 
-    button_clicked1 = st.button('Перейти на сайт 1')
-    button_clicked2 = st.button('Перейти на сайт 2')
-    button_clicked3 = st.button('Перейти на сайт 3')
+    if st.link_button('Для бизнеса', "https://ai-for-business.streamlit.app/"):
+        pass  # Вы можете добавить дополнительный код, который выполнится после нажатия кнопки
 
+    if st.link_button('АI-сценарии', "https://rudolf.streamlit.app/"):
+        pass  # Дополнительный код для второй кнопки
 
-    if button_clicked1:
-        st.markdown('<script>window.open("https://ai-for-business.streamlit.app","_blank");</script>', unsafe_allow_html=True)
-
-    if button_clicked2:
-        st.markdown('<script>window.open("https://rudolf.streamlit.app","_blank");</script>', unsafe_allow_html=True)
-
-    if button_clicked3:
-        st.markdown('<script>window.open("https://urban-analysis-one.streamlit.app","_blank");</script>', unsafe_allow_html=True)
+    if st.link_button('Smart City', "https://urban-analysis-one.streamlit.app/"):
+        pass  # Дополнительный код для третьей кнопки
